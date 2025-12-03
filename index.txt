@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDM Enterprises | Unified Excellence</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:wght=700&family=Inter:wght=400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* GLOBAL STYLES */
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Lato', sans-serif; padding-bottom: 0px; } /* Adjust padding for mobile fixed bar */
+        
+        /* BRAND COLORS */
+        .bg-navy { background-color: #0B2B48; }
+        .text-navy { color: #0B2B48; }
+        .bg-gold { background-color: #F59E0B; }
+        .text-gold { color: #F59E0B; }
+        .border-gold { border-color: #F59E0B; }
+        
+        /* HOVER EFFECTS */
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); }
+
+        /* TYPOGRAPHY UTILS */
+        .font-serif-heading { font-family: 'Playfair Display', serif; }
+        .font-tech { font-family: 'Inter', sans-serif; }
+
+        /* PAGE TRANSITIONS */
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* CUSTOM FOR MOBILE CONTACT BAR */
+        @media (max-width: 767px) {
+            /* Increase body padding on mobile to prevent content from being hidden by the fixed bar */
+            body {
+                padding-bottom: 4.5rem; /* Height of the mobile-only bar */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+        <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md border-t-4 border-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                                <div class="flex-shrink-0 cursor-pointer" onclick="showPage('home')">
+                    <span class="text-3xl font-black tracking-tighter text-navy">
+                        CDM <span class="text-gold">Enterprises</span>
+                    </span>
+                </div>
+                                <nav class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide" id="desktop-nav">
+                                        <a href="#hero" id="nav-home" onclick="showPage('home', 'home')" class="text-gray-600 hover:text-gold transition active-link">Home</a>
+                    <a href="#mission" id="nav-mission" onclick="showPage('home', 'mission')" class="text-gray-600 hover:text-gold transition">Mission</a>
+                    <a href="#leadership" id="nav-leadership" onclick="showPage('home', 'leadership')" class="text-gray-600 hover:text-gold transition">Leadership</a>
+                    <a href="#portfolio" id="nav-portfolio" onclick="showPage('home', 'portfolio')" class="text-gray-600 hover:text-gold transition">Portfolio</a>
+                    <a href="#contact" id="nav-contact" onclick="showPage('home', 'contact')" class="text-gray-600 hover:text-gold transition">Contact</a>
+                </nav>
+                                <div class="md:hidden text-2xl text-navy cursor-pointer">
+                                        <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <div id="app-container">
+
+                <main id="page-home" class="fade-in">
+            
+                        <section id="hero" class="bg-navy text-white pt-24 pb-32 text-center rounded-b-[3rem] shadow-2xl relative overflow-hidden">
+                                <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                    <i class="fa-solid fa-network-wired absolute -top-10 -left-10 text-[20rem]"></i>
+                    <i class="fa-solid fa-chart-line absolute bottom-0 right-0 text-[15rem]"></i>
+                </div>
+
+                <div class="max-w-5xl mx-auto px-6 relative z-10">
+                    <span class="inline-block py-1 px-3 rounded-full bg-white/10 text-gold text-xs font-bold tracking-widest uppercase mb-6 border border-white/20">
+                        The Central Hub for Innovation
+                    </span>
+                    <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black mb-6 leading-tight tracking-tight">
+                        DRIVING <span class="text-gold">SUSTAINABLE</span><br>GROWTH.
+                    </h1>
+                    <p class="text-xl sm:text-2xl font-light text-gray-300 mb-10 max-w-3xl mx-auto">
+                        Unified excellence across Capital, Consulting, Real Estate, and Technology.
+                    </p>
+                    <div class="flex justify-center gap-4">
+                        <button onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})" class="bg-gold text-navy font-bold py-4 px-10 rounded-full text-lg hover:bg-amber-400 transition transform hover:-translate-y-1 shadow-lg shadow-amber-500/20">
+                            Explore Companies
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+                        <section id="mission" class="py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="w-16 h-1 bg-gold mb-6"></div>
+                        <h2 class="text-4xl lg:text-5xl font-extrabold text-navy mb-6">
+                            Tailored Solutions.<br>
+                            <span class="text-gold">Unified Impact.</span>
+                        </h2>
+                        <p class="text-xl text-gray-600 leading-relaxed mb-6">
+                            CDM Enterprises serves as the strategic backbone for a diverse portfolio of companies. We don't just manage; we empower. By leveraging synergies between finance, technology, and real estate, we create ecosystems where businesses—and people—thrive.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 mt-8">
+                            <div class="border-l-4 border-gold pl-4">
+                                <span class="block text-3xl font-black text-navy">5+</span>
+                                <span class="text-sm text-gray-500 uppercase font-bold">Subsidiaries</span>
+                            </div>
+                            <div class="border-l-4 border-gold pl-4">
+                                <span class="block text-3xl font-black text-navy">4+</span>
+                                <span class="text-sm text-gray-500 uppercase font-bold">Sectors Covered</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-3xl p-8 relative">
+                                                <div class="grid grid-cols-2 gap-4">
+                            <div class="h-48 bg-navy rounded-2xl flex items-center justify-center text-gold text-4xl hover-lift"><i class="fa-solid fa-chart-pie"></i></div>
+                            <div class="h-48 bg-white rounded-2xl flex items-center justify-center text-navy text-4xl shadow-lg hover-lift"><i class="fa-solid fa-city"></i></div>
+                            <div class="h-48 bg-gold rounded-2xl flex items-center justify-center text-navy text-4xl hover-lift"><i class="fa-solid fa-mobile-screen"></i></div>
+                            <div class="h-48 bg-gray-200 rounded-2xl flex items-center justify-center text-gray-400 text-4xl hover-lift"><i class="fa-solid fa-users-gear"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                        <section id="leadership" class="py-24 bg-gray-100 border-t border-b border-gray-200">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <span class="text-gold font-bold tracking-widest uppercase">Our Visionary</span>
+                        <h2 class="text-4xl lg:text-5xl font-extrabold text-navy mt-2">Meet Michael Graham</h2>
+                    </div>
+
+                    <div class="bg-white p-8 lg:p-12 rounded-3xl shadow-xl border border-gray-200 grid lg:grid-cols-3 gap-10 items-center">
+                                                <div class="lg:col-span-1 text-center lg:text-left">
+                            <img src="https://placehold.co/200x200/0B2B48/F59E0B?text=MG" alt="Michael Graham Profile" class="w-48 h-48 rounded-full object-cover mx-auto lg:mx-0 mb-6 border-8 border-gold/50 shadow-lg">
+                            <h3 class="text-3xl font-black text-navy">Michael Graham</h3>
+                            <p class="text-xl text-gold font-bold mb-3">CEO & Founder, CDM Enterprises</p>
+                            <div class="space-x-4">
+                                <span class="text-sm text-gray-500">Strategic Leader</span>
+                                <span class="text-sm text-gray-500">|</span>
+                                <span class="text-sm text-gray-500">Advocate</span>
+                            </div>
+                        </div>
+
+                                                <div class="lg:col-span-2 text-gray-600 leading-relaxed space-y-4">
+                            <p class="text-lg font-medium text-navy">
+                                Michael Graham is a self-made, multi-sector entrepreneur and the visionary CEO and Founder of CDM Enterprises, a strategic collective that drives excellence across finance, investment, real estate, and technology. Built from the foundation of C. D. Stroud & M. Graham Investments, Michael has established an expansive portfolio dedicated to helping small business owners and individuals secure capital, achieve operational mastery, and realize sustainable growth. He has empowered countless entrepreneurs to build financial security and unlock their full potential.
+                            </p>
+                            <p>
+                                Originally from Philadelphia, PA, Michael established his diversified portfolio in Oklahoma City, OK. His leadership is defined by a rigorous business acumen coupled with a genuine commitment to empowering others. He oversees strategic mandates for all CDM Enterprises subsidiaries, spanning finance, consulting, capital, property management, and technology. Michael’s philosophy is centered on fostering growth—not just in business metrics, but in the lives of the people he serves, providing strategic advice on securing funding and mentoring individuals on developing a success-driven mindset.
+                            </p>
+                            <p class="border-l-4 border-gold pl-4 text-sm italic">
+                                Beyond his professional achievements, Michael maintains a deep commitment to his community. He is a proud and active member of Phi Beta Sigma Fraternity, Inc., where he is involved in initiatives promoting service, scholarship, and brotherhood. As a devoted family man, he ensures the values of integrity, loyalty, and love are the bedrock of both his personal life and his entire business ecosystem. Michael’s commitment to excellence and his unwavering desire to help others ascend make him a respected leader and a trusted advisor for those seeking to take their ventures to the next level.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+                        <section id="portfolio" class="py-24 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <span class="text-gold font-bold tracking-widest uppercase">Our Portfolio</span>
+                        <h2 class="text-4xl lg:text-5xl font-extrabold text-navy mt-2">The Five Pillars</h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                                                <div onclick="showPage('stroud')" class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition cursor-pointer border border-gray-100 relative overflow-hidden hover-lift">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-gold/10 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-gold/20"></div>
+                            <div class="w-14 h-14 bg-navy rounded-xl flex items-center justify-center text-white text-2xl mb-6 shadow-md">
+                                <img src="/images/Printable Resolution File (JPG) 1.jpg" alt="C. D. Stroud & M. Graham Investments Logo" class="h-full w-auto p-1 object-contain bg-white rounded-xl">
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy mb-2 group-hover:text-gold transition">C. D. Stroud & M. Graham Investments</h3>
+                            <p class="text-gray-500 mb-6 line-clamp-3">The foundational firm that manages the enterprise's core investment strategies and wealth creation portfolio.</p>
+                            <span class="text-gold font-bold text-sm uppercase tracking-wide group-hover:underline">View Profile &rarr;</span>
+                        </div>
+
+                                                <div onclick="showPage('clarity')" class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition cursor-pointer border border-gray-100 relative overflow-hidden hover-lift">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-blue-100 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-blue-200"></div>
+                            <div class="w-14 h-14 bg-navy rounded-xl flex items-center justify-center text-white text-2xl mb-6 shadow-md">
+                                <img src="/images/JPG.jpg" alt="MG Clarity Consulting Logo" class="h-full w-auto p-2 object-contain bg-white rounded-xl">
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy mb-2 group-hover:text-gold transition">MG Clarity Consulting</h3>
+                            <p class="text-gray-500 mb-6 line-clamp-3">Operational excellence and leadership development for scaling businesses.</p>
+                            <span class="text-gold font-bold text-sm uppercase tracking-wide group-hover:underline">View Profile &rarr;</span>
+                        </div>
+
+                                                <div onclick="showPage('mtbr')" class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition cursor-pointer border border-gray-100 relative overflow-hidden hover-lift">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-green-100 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-green-200"></div>
+                            <div class="w-14 h-14 bg-navy rounded-xl flex items-center justify-center text-white text-2xl mb-6 shadow-md">
+                                <img src="/images/MTBR.jpg" alt="MTBR Capital Logo" class="h-full w-auto p-1 object-contain bg-white rounded-xl">
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy mb-2 group-hover:text-gold transition">MTBR Capital</h3>
+                            <p class="text-gray-500 mb-6 line-clamp-3">Connecting investors with high-potential opportunities, drawing on MG Investments' strategic insight.</p>
+                            <span class="text-gold font-bold text-sm uppercase tracking-wide group-hover:underline">View Profile &rarr;</span>
+                        </div>
+
+                                                <div onclick="showPage('ochre')" class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition cursor-pointer border border-gray-100 relative overflow-hidden hover-lift">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-orange-100 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-orange-200"></div>
+                            <div class="w-14 h-14 bg-navy rounded-xl flex items-center justify-center text-white text-2xl mb-6 shadow-md">
+                                <img src="/images/OCHRE.jpg" alt="Ochre Property Mgmt Logo" class="h-full w-auto p-1 object-contain bg-white rounded-xl">
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy mb-2 group-hover:text-gold transition">Ochre Property Mgmt</h3>
+                            <p class="text-gray-500 mb-6 line-clamp-3">Full-service asset management enhancing value for properties.</p>
+                            <span class="text-gold font-bold text-sm uppercase tracking-wide group-hover:underline">View Profile &rarr;</span>
+                        </div>
+
+                                                <div onclick="showPage('pathway')" class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition cursor-pointer border border-gray-100 relative overflow-hidden md:col-span-2 lg:col-span-1 hover-lift">
+                            <div class="absolute top-0 right-0 w-24 h-24 bg-purple-100 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-purple-200"></div>
+                            <div class="w-14 h-14 bg-navy rounded-xl flex items-center justify-center text-white text-2xl mb-6 shadow-md">
+                                <img src="/images/Pathway Tech_Logo.jpg" alt="Pathway Tech Logo" class="h-full w-auto p-1 object-contain bg-white rounded-xl">
+                            </div>
+                            <h3 class="text-2xl font-bold text-navy mb-2 group-hover:text-gold transition">Pathway Tech</h3>
+                            <p class="text-gray-500 mb-6 line-clamp-3">AI-powered financial wellness solutions helping millions achieve debt freedom.</p>
+                            <span class="text-gold font-bold text-sm uppercase tracking-wide group-hover:underline">View Profile &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+                        <div id="page-stroud" class="hidden fade-in bg-white min-h-screen">
+                        <div class="bg-gray-100 border-b py-4 px-6 flex justify-between items-center sticky top-20 z-40">
+                <span class="text-sm font-bold text-gray-500 uppercase tracking-widest">Core Firm & Investments</span>
+                <button onclick="showPage('home', 'portfolio')" class="text-navy font-bold hover:text-gold transition flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+                </button>
+            </div>
+            
+                        <section class="bg-slate-900 text-white py-24 px-6 relative overflow-hidden">
+                <div class="absolute inset-0 bg-[url('https://placehold.co/1920x600/1e293b/FFF?text=')] opacity-20 bg-cover bg-center"></div>
+                <div class="max-w-5xl mx-auto relative z-10 text-center">
+                    <div class="w-40 h-40 mx-auto mb-8 bg-white p-4 rounded-xl shadow-xl">
+                        <img src="/images/Printable Resolution File (JPG) 1.jpg" alt="C. D. Stroud & M. Graham Investments Logo" class="h-full w-auto mx-auto object-contain">
+                    </div>
+                    <h1 class="font-serif-heading text-5xl md:text-6xl mb-6">C. D. Stroud & M. Graham Investments: The Core Firm</h1>
+                    <p class="text-xl text-gray-300 max-w-2xl mx-auto font-light leading-relaxed">
+                        The foundation for Michael Graham's expansive investment strategies and the financial engine of CDM Enterprises.
+                    </p>
+                </div>
+            </section>
+
+                        <section class="max-w-6xl mx-auto px-6 py-20">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="font-serif-heading text-3xl text-slate-900 mb-6">Strategic Expertise</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            **C. D. Stroud & M. Graham Investments** is the foundational entity of CDM Enterprises. It encompasses the strategic management of assets, capital allocation, and the overall investment portfolio, serving as the financial engine that powers all other subsidiaries.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-gold mt-1"></i>
+                                <span class="text-slate-800 font-medium">Core Asset Management</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-gold mt-1"></i>
+                                <span class="text-slate-800 font-medium">Strategic Capital Allocation</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-gold mt-1"></i>
+                                <span class="text-slate-800 font-medium">Enterprise Portfolio Oversight</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                        <h4 class="font-bold text-slate-900 mb-6 uppercase tracking-wider text-sm">Our Impact</h4>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between text-sm font-bold mb-1">
+                                    <span>Portfolio Growth Rate</span>
+                                    <span class="text-gold">35%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-slate-900 h-2 rounded-full" style="width: 35%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm font-bold mb-1">
+                                    <span>Capital Efficiency</span>
+                                    <span class="text-gold">92%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-slate-900 h-2 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                                <div class="mt-20 border-t pt-10 border-gray-200">
+                    <h3 class="text-3xl font-bold text-navy mb-8 text-center">Leadership</h3>
+                    <div class="max-w-md mx-auto">
+                                                <div class="flex items-center bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                            <img src="https://placehold.co/80x80/0B2B48/F59E0B?text=MG" alt="Michael Graham" class="w-20 h-20 rounded-full object-cover mr-4 ring-4 ring-gold/50">
+                            <div>
+                                <p class="text-xl font-bold text-slate-900">Michael Graham</p>
+                                <p class="text-gold font-medium">Founder & CEO, Core Firm</p>
+                                <p class="text-sm text-gray-500 mt-1">Directly oversees all strategic mandates for CDM Enterprises.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+                <div id="page-clarity" class="hidden fade-in bg-white min-h-screen">
+            <div class="bg-white border-b py-4 px-6 flex justify-between items-center sticky top-20 z-40">
+                <span class="text-sm font-bold text-blue-600 uppercase tracking-widest">Management Consulting</span>
+                <button onclick="showPage('home', 'portfolio')" class="text-navy font-bold hover:text-blue-600 transition flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> Back
+                </button>
+            </div>
+
+            <section class="bg-blue-50 py-20 px-6 text-center">
+                <div class="w-40 h-40 mx-auto mb-8 bg-white p-4 rounded-xl shadow-lg flex items-center justify-center">
+                    <img src="/images/JPG.jpg" alt="MG Clarity Consulting Logo" class="h-full w-auto object-contain">
+                </div>
+                <h1 class="text-5xl font-black text-slate-900 mb-4 tracking-tight">MG Clarity Consulting</h1>
+                <p class="text-xl text-blue-800 max-w-2xl mx-auto">Unlocking potential through operational excellence.</p>
+            </section>
+
+            <div class="max-w-7xl mx-auto px-6 pt-10">
+                <p class="text-center text-sm text-gray-500 font-medium">
+                    Part of the CDM Enterprises collective, founded and led by CEO Michael Graham.
+                </p>
+            </div>
+
+                        <section class="max-w-7xl mx-auto px-6 py-20">
+                <div class="text-center mb-16">
+                    <span class="text-blue-600 font-bold uppercase tracking-widest">Our Method</span>
+                    <h2 class="text-4xl font-extrabold text-navy mt-2">The Clarity Process</h2>
+                </div>
+                <div class="grid md:grid-cols-4 gap-8">
+                                        <div class="text-center p-6 rounded-xl border border-blue-200 bg-white shadow-md hover-lift">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-extrabold">1</div>
+                        <h3 class="font-bold text-xl text-navy mb-2">Discovery</h3>
+                        <p class="text-gray-500 text-sm">Deep diagnostic of current challenges and assets.</p>
+                    </div>
+                                        <div class="text-center p-6 rounded-xl border border-blue-200 bg-white shadow-md hover-lift">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-extrabold">2</div>
+                        <h3 class="font-bold text-xl text-navy mb-2">Strategy</h3>
+                        <p class="text-gray-500 text-sm">Co-creating a practical, measurable roadmap for change.</p>
+                    </div>
+                                        <div class="text-center p-6 rounded-xl border border-blue-200 bg-white shadow-md hover-lift">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-extrabold">3</div>
+                        <h3 class="font-bold text-xl text-navy mb-2">Execution</h3>
+                        <p class="text-gray-500 text-sm">Implementing solutions with hands-on support and training.</p>
+                    </div>
+                                        <div class="text-center p-6 rounded-xl border border-blue-200 bg-white shadow-md hover-lift">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-extrabold">4</div>
+                        <h3 class="font-bold text-xl text-navy mb-2">Sustain</h3>
+                        <p class="text-gray-500 text-sm">Ensuring long-term success through monitoring and refinement.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+                <div id="page-mtbr" class="hidden fade-in bg-stone-900 text-stone-100 min-h-screen">
+            <div class="bg-stone-800 border-b border-stone-700 py-4 px-6 flex justify-between items-center sticky top-20 z-40">
+                <span class="text-sm font-bold text-emerald-400 uppercase tracking-widest">Private Capital</span>
+                <button onclick="showPage('home', 'portfolio')" class="text-white font-bold hover:text-emerald-400 transition flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> Back
+                </button>
+            </div>
+
+            <section class="py-24 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="w-40 h-40 mb-8 bg-white p-4 rounded-xl shadow-xl flex items-center justify-center">
+                        <img src="/images/MTBR.jpg" alt="MTBR Capital Logo" class="h-full w-auto object-contain">
+                    </div>
+                    <h1 class="font-serif-heading text-5xl lg:text-7xl mb-6 leading-none">MTBR<br><span class="text-emerald-500">Capital.</span></h1>
+                    <p class="text-stone-400 text-xl mb-8 leading-relaxed border-l-2 border-emerald-500 pl-6">
+                        We connect investors with high-potential opportunities. Thorough due diligence. Strategic analysis. Rigorous standards.
+                    </p>
+                    <button class="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-3 rounded-sm font-bold tracking-widest uppercase text-sm transition">
+                        Investment Thesis
+                    </button>
+                </div>
+                <div class="bg-stone-800 p-8 rounded-lg border border-stone-700">
+                    <h3 class="text-2xl font-bold mb-6 text-white">Focus Areas</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-stone-900 rounded border border-stone-700">
+                            <span>Venture Capital</span>
+                            <i class="fa-solid fa-arrow-trend-up text-emerald-500"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-stone-900 rounded border border-stone-700">
+                            <span>Private Equity</span>
+                            <i class="fa-solid fa-building text-emerald-500"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-stone-900 rounded border border-stone-700">
+                            <span>Structured Finance</span>
+                            <i class="fa-solid fa-hand-holding-dollar text-emerald-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+                <div id="page-ochre" class="hidden fade-in bg-white min-h-screen">
+            <div class="bg-gray-100 border-b py-4 px-6 flex justify-between items-center sticky top-20 z-40">
+                <span class="text-sm font-bold text-orange-600 uppercase tracking-widest">Property Management</span>
+                <button onclick="showPage('home', 'portfolio')" class="text-navy font-bold hover:text-orange-600 transition flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> Back
+                </button>
+            </div>
+
+            <section class="bg-orange-50 py-20 px-6 text-center">
+                <div class="w-40 h-40 mx-auto mb-8 bg-white p-4 rounded-xl shadow-lg flex items-center justify-center">
+                    <img src="/images/OCHRE.jpg" alt="Ochre Property Mgmt Logo" class="h-full w-auto object-contain">
+                </div>
+                <h1 class="text-5xl font-black text-slate-900 mb-4 tracking-tight">Ochre Property Mgmt</h1>
+                <p class="text-xl text-orange-800 max-w-2xl mx-auto">Transforming spaces and elevating experiences.</p>
+            </section>
+
+            <div class="max-w-7xl mx-auto px-6 pt-10">
+                <p class="text-center text-sm text-gray-500 font-medium">
+                    Part of the CDM Enterprises collective, managed under the C. D. Stroud & M. Graham Investment mandate.
+                </p>
+            </div>
+
+            <section class="max-w-7xl mx-auto px-6 py-20">
+                <div class="text-center mb-16">
+                    <span class="text-orange-600 font-bold uppercase tracking-widest">Our Services</span>
+                    <h2 class="text-4xl font-extrabold text-navy mt-2">Comprehensive Asset Care</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-6 rounded-xl border border-gray-200 bg-white shadow-md hover-lift">
+                        <i class="fa-solid fa-handshake text-4xl text-navy mb-4"></i>
+                        <h3 class="font-bold text-xl text-navy mb-2">Tenant Relations</h3>
+                        <p class="text-gray-500 text-sm">Focused on retention and satisfaction to ensure stable occupancy.</p>
+                    </div>
+                    <div class="text-center p-6 rounded-xl border border-gray-200 bg-white shadow-md hover-lift">
+                        <i class="fa-solid fa-screwdriver-wrench text-4xl text-navy mb-4"></i>
+                        <h3 class="font-bold text-xl text-navy mb-2">Maintenance & Repair</h3>
+                        <p class="text-gray-500 text-sm">Proactive and rapid response system to protect property value.</p>
+                    </div>
+                    <div class="text-center p-6 rounded-xl border border-gray-200 bg-white shadow-md hover-lift">
+                        <i class="fa-solid fa-chart-area text-4xl text-navy mb-4"></i>
+                        <h3 class="font-bold text-xl text-navy mb-2">Financial Reporting</h3>
+                        <p class="text-gray-500 text-sm">Transparent monthly statements maximizing investor returns.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+                <div id="page-pathway" class="hidden fade-in bg-white min-h-screen">
+                        <div class="bg-gray-100 border-b py-4 px-6 flex justify-between items-center sticky top-20 z-40">
+                <span class="text-sm font-bold text-purple-600 uppercase tracking-widest">Technology & Fintech</span>
+                <button onclick="showPage('home', 'portfolio')" class="text-navy font-bold hover:text-purple-600 transition flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+                </button>
+            </div>
+
+                        <section class="bg-purple-800 text-white py-24 px-6 relative overflow-hidden">
+                <div class="max-w-5xl mx-auto relative z-10 text-center">
+                                        <div class="w-40 h-40 mx-auto mb-8 bg-white p-4 rounded-xl shadow-xl flex items-center justify-center">
+                        <img src="/images/Pathway Tech_Logo.jpg" alt="Pathway Tech Full Logo" class="h-full w-auto mx-auto object-contain">
+                    </div>
+                                        <h1 class="font-tech text-5xl md:text-6xl mb-6 font-extrabold tracking-tight">
+                        Pathway <span class="text-green-400">Tech</span>
+                    </h1>
+                    <p class="text-xl text-purple-200 max-w-2xl mx-auto font-light leading-relaxed">
+                        Building the future of financial wellness through AI-powered solutions.
+                    </p>
+                </div>
+            </section>
+
+                        <section class="max-w-6xl mx-auto px-6 py-20">
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <h3 class="font-tech text-3xl text-navy mb-6 font-bold">Fintech Innovation</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Pathway Tech is the technology arm of CDM Enterprises, focused on developing cutting-edge financial wellness applications. We leverage **AI and machine learning** to provide personalized strategies for debt reduction, savings optimization, and budget mastery, empowering individuals to achieve financial freedom faster.
+                        </p>
+                        <a href="[Insert Subsidiary Website Link Here]" class="inline-flex items-center gap-2 bg-purple-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-purple-700 transition">
+                            Visit Pathway Tech Website <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl border border-gray-200 space-y-4">
+                        <h4 class="font-bold text-navy uppercase tracking-wider text-sm">Key Technologies</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-microchip text-purple-600"></i>
+                                <span class="text-navy font-medium">AI-Driven Financial Coaching</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-server text-purple-600"></i>
+                                <span class="text-navy font-medium">Secure Cloud Infrastructure</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-mobile-screen text-purple-600"></i>
+                                <span class="text-navy font-medium">Cross-Platform Mobile Applications</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+        <script>
+        const pages = ['page-home', 'page-stroud', 'page-clarity', 'page-mtbr', 'page-ochre', 'page-pathway'];
+        const navLinks = ['nav-home', 'nav-mission', 'nav-leadership', 'nav-portfolio', 'nav-contact'];
+
+        function updateActiveNav(activeId) {
+            navLinks.forEach(id => {
+                const link = document.getElementById(id);
+                if (link) {
+                    link.classList.remove('active-link');
+                }
+            });
+            if (activeId && document.getElementById(`nav-${activeId}`)) {
+                document.getElementById(`nav-${activeId}`).classList.add('active-link');
+            } else if (activeId === 'home') {
+                document.getElementById('nav-home').classList.add('active-link');
+            }
+        }
+
+        function showPage(pageId, scrollToSection = null) {
+            // 1. Handle Visibility
+            pages.forEach(id => {
+                const page = document.getElementById(id);
+                if (page) {
+                    page.classList.add('hidden');
+                    page.classList.remove('fade-in');
+                }
+            });
+
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+                targetPage.classList.add('fade-in');
+            }
+
+            // 2. Handle Navigation Highlighting and Scrolling
+            if (pageId === 'page-home') {
+                updateActiveNav(scrollToSection || 'home');
+                if (scrollToSection) {
+                    document.getElementById(scrollToSection).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            } else {
+                // If showing a subsidiary page, remove all active nav states and scroll to top
+                updateActiveNav(null);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+    </script>
+
+</body>
+</html>
